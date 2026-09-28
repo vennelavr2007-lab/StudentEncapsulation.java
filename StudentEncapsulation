@@ -1,0 +1,43 @@
+class Student {
+    private int id;
+    private String name;
+    private double marks;
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setMarks(double marks) {
+        if (marks >= 0 && marks <= 100) {
+            this.marks = marks;
+        } else {
+            System.out.println("Invalid marks");
+        }
+    }
+    public double getMarks() {
+        return marks;
+    }
+}
+public class StudentEncapsulation {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.setId(101);
+        student.setName("Rahul");
+        student.setMarks(85.5);
+        System.out.println("Student ID: " + student.getId());
+        System.out.println("Student Name: " + student.getName());
+        System.out.println("Student Marks: " + student.getMarks());
+    }
+}
+
+OUTPUT:
+Student ID: 101 Student
+Name: Rahul 
+Student Marks: 85.5
